@@ -40,14 +40,16 @@ function selectImages(event) {
         }
 
         imgCon.forEach((item, index)=> {
-            if(index >= 5) {
+            if(index >= 6) {
                 const textEl = document.createElement('h4');
                 textEl.textContent = "Maksimal 5ta surat yuklash mumkin";
                 textEl.classList.add('images__text');
-
                 dataImages.appendChild(textEl);
+
                 imageSelect.remove();
-            } 
+                containerEl.remove();
+            }
+
             defaultSlider.forEach((i)=> {
                 if(index === 2) {
                     i.remove();
