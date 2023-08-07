@@ -1,0 +1,140 @@
+@media screen and (max-width: 788px) {
+    .images {
+        grid-template-columns: 170px 170px 170px !important; 
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .data__container {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .data__title {
+        max-width: 300px !important;
+        width: 100%;
+
+        h1 {
+            font-size: 20px;
+
+            span {
+                font-size: 20px;
+            }
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .images {
+        grid-template-columns: 250px 250px !important; 
+        justify-content: center !important;
+
+          .image {
+            max-width: 250px;
+            width: 100%;
+            height: 170px;
+
+            .imageEl {
+              max-width: 250px !important;
+              width: 100%;
+              height: 100% !important;
+              object-fit: cover !important;
+              object-position: center !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        padding: 30px 10px !important;
+    }
+
+    .data__container {
+        padding: 20px 20px;
+    }
+
+    .data__name {
+        margin-top: 30px;
+    }
+
+    .images {
+        grid-template-columns: 320px !important; 
+
+        .image, .image__select {
+            max-width: 320px !important;
+            width: 100%;
+            height: 320px;
+
+            .imageEl {
+                max-width: 320px !important;
+                width: 100% !important;
+                height: 320px !important;
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+        }
+
+         .default__slider {
+            display: none;
+        }
+    }
+
+    .input__title {
+        font-size: 16px;
+    }
+
+    .home {
+        width: 100% !important;
+        padding: 10px 16px !important; 
+        font-size: 14px !important;
+    }
+
+    .number__input {
+        padding: 10px 16px !important; 
+
+        .form__input {
+            padding: 0 !important;
+        }
+    }
+
+    .form__input {
+        padding: 10px 16px !important; 
+        
+        &::placeholder {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .data__btns {
+        button {
+            padding: 10px 13px !important;
+            font-size: 13px !important; 
+        }
+    }
+
+    .images {
+        grid-template-columns: 1fr !important; 
+    }
+
+    .image {
+        max-width: 270px !important;
+        width: 100%;
+        height: 270px !important;
+        overflow: hidden;
+    }
+
+    .imageEl {
+        max-width: 290px !important;
+        width: 100% !important;
+        height: 290px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+};

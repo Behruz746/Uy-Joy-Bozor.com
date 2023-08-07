@@ -1,0 +1,420 @@
+@font-face {
+  font-family: "San Francisco Pro";
+  src: local("San Francisco Pro Display Medium"), local("San-Francisco-Pro-Display-Medium"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: initial;
+  font-weight: initial;
+}
+
+body {
+  font-family: "San Francisco Pro";
+  background-color: #ffffff;
+}
+body .container {
+  padding: 50px 20px;
+}
+
+.over {
+  color: #2C3E50;
+  background-color: #E5E8E8;
+}
+
+.out {
+  color: #fff;
+  background-color: #2C3E50;
+}
+
+.data__container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background-color: #ebeff0;
+}
+
+.data__title {
+  max-width: 560px;
+  width: 100%;
+}
+.data__title h1 {
+  color: #2C3E50;
+  font-size: 23px;
+  line-height: 140%;
+}
+.data__title span {
+  font-weight: 700 !important;
+  color: #2C3E50;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.form__data {
+  width: 100%;
+  margin-top: 30px;
+}
+.form__data .data__selects {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.form__data .form__input {
+  width: 100%;
+}
+.form__data .home {
+  width: 100%;
+}
+
+.data__name {
+  margin-top: 50px;
+  max-width: 344px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.data__name h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 140%;
+  color: #2C3E50;
+}
+.data__name .data__btns {
+  display: flex;
+}
+.data__name .data__btns button {
+  padding: 12px 24px;
+  border: 0;
+  outline: 0;
+  transition: 0.2s linear;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.data__name .data__btn01 {
+  border-radius: 6px 0 0 6px;
+}
+.data__name .data__btn02 {
+  border-radius: 0 6px 6px 0;
+}
+
+.data__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.data__images .images {
+  display: grid;
+  grid-template-columns: 170px 170px 170px 170px;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 800px;
+  width: 100%;
+}
+.data__images .default__slider:nth-child(3) {
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+.data__images .image {
+  max-width: 172px;
+  width: 100%;
+  height: 172px;
+  border-radius: 6px;
+  background-color: #E5E8E8;
+  position: relative;
+}
+.data__images .image .imageEl {
+  max-width: 172px;
+  width: 100%;
+  height: 172px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.data__images .image .imgIn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: transparent;
+  color: transparent;
+}
+.data__images .image__select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  order: 0;
+}
+.data__images .image__select:hover {
+  background-color: rgb(220, 223, 223);
+}
+.data__images .image__select .image__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+.data__images .image__select h3 {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.data__images .image__select img {
+  width: 40px;
+  height: 40px;
+}
+.data__images .images__text {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #E74C3C;
+}
+
+.data__row {
+  width: 100%;
+}
+.data__row .input__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #2C3E50;
+}
+.data__row .form__input {
+  padding: 13px 20px;
+  border: 1px solid #2C3E50;
+  background-color: #ffffff;
+  border-radius: 6px;
+  outline: 0;
+}
+.data__row .form__input::-moz-placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+.data__row .form__input:-ms-input-placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+.data__row .form__input::placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+.data__row .home {
+  padding: 13px 20px;
+  border: 1px solid #2C3E50;
+  border-radius: 6px;
+  outline: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+
+.data__price p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #E74C3C;
+}
+
+.number__input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 13px 20px;
+  border: 1px solid #2C3E50;
+  background-color: #ffffff;
+  border-radius: 6px;
+  outline: 0;
+}
+.number__input .form__input {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.form__submit {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 6px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: #2C3E50;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 788px) {
+  .images {
+    grid-template-columns: 170px 170px 170px !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  .data__container {
+    max-width: 700px;
+    width: 100%;
+  }
+  .data__title {
+    max-width: 300px !important;
+    width: 100%;
+  }
+  .data__title h1 {
+    font-size: 20px;
+  }
+  .data__title h1 span {
+    font-size: 20px;
+  }
+  .data__title h1 br {
+    display: none;
+  }
+}
+@media screen and (max-width: 606px) {
+  .images {
+    grid-template-columns: 250px 250px !important;
+    justify-content: center !important;
+  }
+  .images .image {
+    max-width: 250px;
+    width: 100%;
+    height: 170px;
+  }
+  .images .image .imageEl {
+    max-width: 250px !important;
+    width: 100%;
+    height: 100% !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    -o-object-position: center !important;
+       object-position: center !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 30px 10px !important;
+  }
+  .data__container {
+    padding: 20px 20px;
+  }
+  .data__name {
+    margin-top: 30px;
+  }
+  .images {
+    grid-template-columns: 320px !important;
+  }
+  .images .image, .images .image__select {
+    max-width: 320px !important;
+    width: 100%;
+    height: 320px;
+  }
+  .images .image .imageEl, .images .image__select .imageEl {
+    max-width: 320px !important;
+    width: 100% !important;
+    height: 320px !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    -o-object-position: center !important;
+       object-position: center !important;
+  }
+  .images .default__slider {
+    display: none;
+  }
+  .input__title {
+    font-size: 16px;
+  }
+  .home {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+  .number__input {
+    padding: 10px 16px !important;
+  }
+  .number__input .form__input {
+    padding: 0 !important;
+  }
+  .form__input {
+    padding: 10px 16px !important;
+  }
+  .form__input::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  .form__input:-ms-input-placeholder {
+    font-size: 14px !important;
+  }
+  .form__input::placeholder {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .data__btns button {
+    padding: 10px 13px !important;
+    font-size: 13px !important;
+  }
+  .images {
+    grid-template-columns: 1fr !important;
+  }
+  .image {
+    max-width: 270px !important;
+    width: 100%;
+    height: 270px !important;
+    overflow: hidden;
+  }
+  .imageEl {
+    max-width: 290px !important;
+    width: 100% !important;
+    height: 290px !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    -o-object-position: center !important;
+       object-position: center !important;
+  }
+}/*# sourceMappingURL=main.css.map */
