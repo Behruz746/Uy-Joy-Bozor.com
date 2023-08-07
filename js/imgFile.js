@@ -2,6 +2,7 @@ const fileSelecInput = document.querySelector('.filePath');
 const imageContainer = document.getElementById('imageContainer');
 const imageSelect = document.querySelector('.image__select');
 const defaultSlider = document.querySelectorAll('.default__slider');
+const dataImages = document.querySelector('.data__images');
 
 function selectImages(event) {
     const fileFirst = event.target.files;
@@ -40,6 +41,11 @@ function selectImages(event) {
 
         imgCon.forEach((item, index)=> {
             if(index >= 5) {
+                const textEl = document.createElement('h4');
+                textEl.textContent = "Maksimal 5ta surat yuklash mumkin";
+                textEl.classList.add('images__text');
+
+                dataImages.appendChild(textEl);
                 imageSelect.remove();
             } 
             defaultSlider.forEach((i)=> {
