@@ -43,6 +43,10 @@ body .container {
   color: #E74C3C;
 }
 
+.err--remove {
+  display: block;
+}
+
 .data__container {
   margin: 0 auto;
   max-width: 800px;
@@ -362,7 +366,7 @@ body .container {
   .imageEl {
     max-width: 320px !important;
     width: 100% !important;
-    height: 320px !important;
+    height: 100% !important;
     -o-object-fit: cover !important;
        object-fit: cover !important;
     -o-object-position: center !important;

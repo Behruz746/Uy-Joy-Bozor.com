@@ -6,6 +6,7 @@ const form = document.getElementById('form-data');
 const selectInput = document.getElementById('selectInput');
 
 const regEx = /^[a-zA-Z0-9]{6,100}$/;
+const regExNum = /^[a-zA-Z0-9]{13}$/;
 
 let [
     descriptionInput, 
@@ -28,14 +29,30 @@ let [
 
 function formSubmit(e) {
     e.preventDefault();
+    const formInput = document.querySelectorAll('.form__input');
+    const dataRow = document.querySelectorAll('.err--active');
 
-    let parnetEl = descriptionInput.parentElement.children[2];
-    let result = regEx.test(descriptionInput.value);
+    formInput.forEach(item=> {
+        let parentEl = item.nextElementSibling;
+        let result = regEx.test(item.value);
 
-    if(result) {
-        parnetEl.style.display = 'none';
+        console.log(parentEl);
+      
+        if(result) {
+            parentEl.classList.remove('err--remove');
+        } else if (parentEl.getAttribute('id') === 'numbersBtn') {
+            parentEl.classList.remove('err--remove');
+        } else {
+            parentEl.classList.add('err--remove');
+        }
+    });
+
+    let resultNum = regExNum.test(numberInput.value);
+
+    if(resultNum) {
+        console.log(true);
     } else {
-        parnetEl.style.display = 'block';
+        console.log(false);
     }
 };
 
