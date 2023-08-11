@@ -208,7 +208,7 @@ body .container {
 .form__row label {
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 140%;
   color: #2C3E50;
 }
@@ -285,4 +285,8 @@ body .container {
   width: 20px;
   height: 20px;
   transition: 0.2s linear;
+}
+
+.form-submit__row {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

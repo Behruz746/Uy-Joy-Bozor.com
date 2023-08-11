@@ -171,7 +171,7 @@
     label {
         font-size: 18px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 140%;
         color: #2C3E50;
     }
@@ -241,5 +241,13 @@
         width: 20px;
         height: 20px;
         transition: .2s linear;
+    }
+}
+
+.form-submit__row {
+    width: 100%;
+
+    button {
+
     }
 }
