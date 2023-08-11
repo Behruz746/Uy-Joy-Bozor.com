@@ -26,88 +26,30 @@
                 </div>
             </div>
 
-            <form action="#" class="form__data" id="form-data">
-                <div class="data__selects">
-                    <div class="data__images">
-                        <div class="images" id="imageContainer">
+            <form name="mainForm" class="form__data" action="#">
+                <div class="main-form__colume">
+                    
+                    <div class="form-image__row">
 
-                            <div class="image__select image">
-                                <input type="file" class="filePath image__input" accept="image/*" multiple> 
-                                <img src="./assets/images/svg/pluse01.svg" alt="pluse icon">
-                                <h3>Rasm yuklash <br> uchun</h3>
+                        <div class="creat--card">
+                            <div class="card__icon">
+                                <img src="./assets/images/svg/pluse01.svg" alt="icon pluse">
+                                <p>Rasm yuklash uchun</p>
                             </div>
 
-                            <div class="image default__slider"></div>
-                            <div class="image default__slider"></div>
-                            <div class="image default__slider"></div>
-            
+                            <label for="file-01"></label>
+                            <input  type="file" name="nameFile" id="file-01">
                         </div>
+
+                        <div class="image__card"></div>
+                        <div class="image__card"></div>
+                        <div class="image__card"></div>
+
                     </div>
 
-                    <div class="data__description data__row">
-                        <h3 class="input__title">E’lon sarlavhasi</h3>
-                        <input type="text" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”." class="form__input" id="description-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__home data__row">
-                        <h3 class="input__title">Qanday xonadon?</h3>
-                        <select name="select" class="home" id="selectInput">
-                            <option value="value1" class="red">Hovli joy</option>
-                            <option value="value2">Ko'p xonaliy uy joy</option>
-                            <option value="value3">Dacha 😍</option>
-                        </select>
-                    </div>
-    
-                    <div class="data__room data__row">
-                        <h3 class="input__title">Xonalar soni nechta</h3>
-                        <input type="text" placeholder="Masalan, “5ta”." class="form__input" id="room-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__size data__row">
-                        <h3 class="input__title">Tomorqa o’lchami, nechi sotix?</h3>
-                        <input type="text" placeholder="Masalan, “8 sotix”." class="form__input" id="size-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__repair data__row">
-                        <h3 class="input__title">Remont. Xonadan qachon tamirlangan?</h3>
-                        <input type="text" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”." class="form__input" id="repair-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__addition data__row">
-                        <h3 class="input__title">Qo’shimcha ma’lumot yoki qulayliklar</h3>
-                        <input type="text" placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”." class="form__input" id="addition-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__from data__row">
-                        <h3 class="input__title">Manzil qayerda?</h3>
-                        <input type="text" placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”." class="form__input" id="from-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__price data__row">
-                        <h3 class="input__title">Narxi qancha?</h3>
-                        <input type="text" placeholder="Masalan, “$40,000 kelishamiz”." class="form__input" id="price-input">
-                        <p class="err--active">Error: plase full type this input!</p>
-                    </div>
-    
-                    <div class="data__number data__row">
-                        <h3 class="input__title">Telefon raqamingiz?</h3>
-                        <div class="number__input">
-                            <input type="text" placeholder="Masalan, “99 123 45 67”." class="form__input" id="number-input">
-
-                            <div id="numbersBtn">
-                                <img src="./assets/images/svg/pluse02.svg" alt="pluse icon">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="form__submit" type="submit">E’lonni joylash</button>
                 </div>
             </form>
+
         </div>
     </div>
 
