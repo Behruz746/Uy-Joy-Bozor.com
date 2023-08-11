@@ -390,4 +390,10 @@ body .container {
   .input__box input::placeholder {
     font-size: 14px !important;
   }
+}
+@media screen and (max-width: 270px) {
+  .data__btns button {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+  }
 }/*# sourceMappingURL=main.css.map */
