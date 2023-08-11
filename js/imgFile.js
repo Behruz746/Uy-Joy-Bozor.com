@@ -25,13 +25,13 @@ function addImageFile() {
   const updateInput = document.querySelectorAll('.inputNewFile');
 
   updateInput.forEach((item)=> item.addEventListener('change', ()=> {
+    let siblingEl = inputEl.nextElementSibling;
     let newUrl = URL.createObjectURL(item.files[0]);
-    imageEl.src = newUrl;
+    siblingEl.src = newUrl;
   }));
 
   updateInput.forEach((item, index)=> {
     if(index >= 4) {
-      console.log('5 card maked');
       creatCard.remove();
       document.querySelector('.card__err').classList.remove('remove--add');
     }

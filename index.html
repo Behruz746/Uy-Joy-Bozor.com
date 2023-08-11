@@ -44,11 +44,74 @@
                         <div class="image__card"></div>
                         <div class="image__card"></div>
                         <div class="image__card"></div>
-
-
                     </div>
                     <p class="card__err error__text remove--add">Maksimal 5ta surat yuklash mumkin</p>
 
+                    <div class="form-adTitle__row form__row">
+                        <label for="userAd">E’lon sarlavhasi </label>
+                        <input tabindex="2" type="text" name="userAd" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.">
+                        <p class="userAd__err error__text remove--add">Sarlavha yozing!</p>
+                    </div>
+
+                    <div class="form-select__row form__row">
+                        <label for="selectHome">Qanday xonadon?</label>
+                        <select tabindex="3" name="selectHome">
+                            <option selected value="hovli-joy">Hovli joy</option>
+                            <option value="kvartira">Kvartira</option>
+                            <option value="tomorqa">Tomorqa</option>
+                        </select>
+                        <p class="userSelect__err error__text remove--add">Bo’limni tanlang yozing!</p>
+                    </div>
+
+                    <div class="form-room__row form__row">
+                        <label for="userRoom">Xonalar soni nechta</label>
+                        <input tabindex="4" type="text" name="userRoom" placeholder="Masalan, “5ta”.">
+                        <p class="userRoom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
+                    </div>
+
+                    <div class="form-fixed__row form__row">
+                        <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
+                        <input tabindex="5" type="text" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
+                        <p class="userFixed__err error__text remove--add">Remonti haqida ma’lumot kiriting!</p>
+                    </div>
+                    
+                    <div class="form-date__row form__row">
+                        <label for="userDate">Qo’shimcha ma’lumot yoki qulayliklar</label>
+                        <input tabindex="6" type="text" name="userDate" placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.">
+                        <p class="userDate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
+                    </div>
+
+                    <div class="form-from__row form__row">
+                        <label for="userFrom">Manzil qayerda?</label>
+                        <input tabindex="7" type="text" name="userFrom" placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”.">
+                        <p class="userFrom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
+                    </div>
+
+                    <div class="form-price__row form__row">
+                        <label for="userPrice">Narxi qancha?</label>
+                        <input tabindex="8" type="text" name="userPrice" placeholder="Masalan, “$40,000 kelishamiz”.">
+                        <p class="userPrice__err error__text remove--add">Narxini kiriting!</p>
+                    </div>
+
+                    <div class="form-price__row form__row">
+
+                        <div class="form-number__first">
+                            <label for="userPrice">Telefon raqamingiz?</label>
+                            <div class="input__box">
+                                <input tabindex="9" type="tel" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
+                                <img src="./assets/images/png/pluse02.png" alt="phone numbers icon">
+                            </div>
+                            <p class="userPrice__err error__text remove--add">Telefon raqam kiriting!</p>
+                        </div>
+                        
+                        <div class="form-number__last remove--add" style="margin-top: 30px;">
+                            <label for="userPrice">Qo'shimcha telefon raqamingiz</label>
+                            <input tabindex="10" type="tel" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
+                            <p class="userPrice__err error__text remove--add">Telefon raqam kiriting!</p>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
             </form>
 
