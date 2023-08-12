@@ -17,7 +17,6 @@
                     telegram <br> guruhiga e’lon joylash uchun ushbu bo’limlarni to’ldiring!
                 </h1>
             </div>
-
             <div class="data__name">
                 <h3>Siz qanday e’lon joylamoqchisiz?</h3>
                 <div class="data__btns">
@@ -25,18 +24,14 @@
                     <button class="data__btn02 over">Avto e’lon</button>
                 </div>
             </div>
-
             <form name="mainForm" class="form__data" action="#">
                 <div class="main-form__colume">
-                    
                     <div class="form-image__row">
-
                         <div class="creat--card">
                             <div class="card__icon">
                                 <img src="./assets/images/svg/pluse01.svg" alt="icon pluse">
                                 <p>Rasm yuklash uchun</p>
                             </div>
-
                             <label for="file-01"></label>
                             <input tabindex="1" type="file" name="nameFile" id="file-01">
                         </div>
@@ -45,13 +40,11 @@
                         <div class="image__card remove--card"></div>
                     </div>
                     <p class="card__err error__text remove--add">Maksimal 5ta surat yuklash mumkin</p>
-
                     <div class="form-adTitle__row form__row">
                         <label for="userAd">E’lon sarlavhasi </label>
-                        <input tabindex="2" type="text" name="userAd" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.">
+                        <input tabindex="2" type="text" class="focus" name="userAd" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.">
                         <p class="userAd__err error__text remove--add">Sarlavha yozing!</p>
                     </div>
-
                     <div class="form-select__row form__row">
                         <label for="selectHome">Qanday xonadon?</label>
                         <select tabindex="3" name="selectHome">
@@ -61,61 +54,56 @@
                         </select>
                         <p class="userSelect__err error__text remove--add">Bo’limni tanlang yozing!</p>
                     </div>
-
                     <div class="form-room__row form__row">
                         <label for="userRoom">Xonalar soni nechta</label>
-                        <input tabindex="4" type="text" name="userRoom" placeholder="Masalan, “5ta”.">
+                        <input tabindex="4" type="number" class="focus" min="1" max="100" name="userRoom" placeholder="Masalan, “5ta”.">
                         <p class="userRoom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
                     </div>
-
+                    <div class="form-estate__row form__row">
+                        <label for="userEstate">Tomorqa o’lchami, nechi sotix?</label>
+                        <input tabindex="4" type="number" class="focus" min="1" max="100" name="userEstate" placeholder="Masalan, “8 sotix”.">
+                        <p class="userEstate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
+                    </div>
                     <div class="form-fixed__row form__row">
                         <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
-                        <input tabindex="5" type="text" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
+                        <input tabindex="5" type="text" class="focus" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
                         <p class="userFixed__err error__text remove--add">Remonti haqida ma’lumot kiriting!</p>
                     </div>
-                    
                     <div class="form-date__row form__row">
                         <label for="userDate">Qo’shimcha ma’lumot yoki qulayliklar</label>
-                        <input tabindex="6" type="text" name="userDate" placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.">
+                        <input tabindex="6" type="text" class="focus" name="userDate" placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.">
                         <p class="userDate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
                     </div>
-
                     <div class="form-from__row form__row">
                         <label for="userFrom">Manzil qayerda?</label>
-                        <input tabindex="7" type="text" name="userFrom" placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”.">
+                        <input tabindex="7" type="text" class="focus" name="userFrom" placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”.">
                         <p class="userFrom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
                     </div>
-
                     <div class="form-price__row form__row">
                         <label for="userPrice">Narxi qancha?</label>
-                        <input tabindex="8" type="text" name="userPrice" placeholder="Masalan, “$40,000 kelishamiz”.">
+                        <input tabindex="8" type="number" class="focus" name="userPrice" min="100" max="#" placeholder="Masalan, “$40,000 kelishamiz”.">
                         <p class="userPrice__err error__text remove--add">Narxini kiriting!</p>
                     </div>
-
                     <div class="form-price__row form__row">
                         <div class="form-number__first">
                             <label for="userPrice">Telefon raqamingiz?</label>
                             <div class="input__box">
-                                <input tabindex="9" type="tel" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
-                                <img src="./assets/images/png/pluse02.png" alt="phone numbers icon">
+                                <input tabindex="9" type="tel" class="focus" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
+                                <img src="./assets/images/svg/pluse02.svg" alt="phone numbers icon">
                             </div>
                             <p class="userPrice__err error__text remove--add">Telefon raqam kiriting!</p>
                         </div>
-                        
                         <div class="form-number__last remove--add" style="margin-top: 30px;">
                             <label for="userPrice">Qo'shimcha telefon raqamingiz</label>
-                            <input tabindex="10" type="tel" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
+                            <input tabindex="10" type="tel" class="focus" name="userPrice" placeholder="Masalan, “99 123 45 67”.">
                             <p class="userPrice__err error__text remove--add">Telefon raqam kiriting!</p>
                         </div>
                     </div>
-                    
                 </div>
-
                 <div class="form-submit__row">
                     <button type="submit">E’lonni joylash</button>
                 </div>
             </form>
-
         </div>
     </div>
 

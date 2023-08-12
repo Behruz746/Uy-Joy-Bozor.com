@@ -271,12 +271,12 @@ body .container {
   width: 100%;
   border: 1px solid #2C3E50;
   background-color: #ffffff;
-  padding: 3px 20px;
+  padding: 3px 15px;
   border-radius: 6px;
   margin: 10px 0;
 }
 .form-number__first input {
-  padding: 0;
+  padding: 0 5px;
   border: 0;
   background-color: transparent;
   outline: 0;
