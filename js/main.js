@@ -9,6 +9,9 @@ const elementsUserAd = elements.userAd;
 const elementsUserRoom = elements.userRoom;
 const elementsUserEstate = elements.userEstate;
 const elementsUserFix = elements.userFix;
+const ElementUserDate = elements.userDate;
+const ElementUserFrom = elements.userFrom;
+const ElementUserPrice = elements.userPrice;
 const elementsUserNumberFirst = elements.userNumberFirst;
 const elementsUserNumberLast = elements.userNumberLast;
 
@@ -17,14 +20,14 @@ function submitForm(event) {
     let regex = /^[a-zA-Z0-9а-яА-Я\s]{10,}$/;
     let resultUserAd = regex.test(elementsUserAd.value);
     let resultUserFix = regex.test(elementsUserFix.value);
+    let resultUserDate = regex.test(ElementUserDate.value);
+    let resultUserFrom = regex.test(ElementUserFrom.value);
     
     if(resultUserAd) {
-        console.log(true);
         document.querySelector('.userAd__err').classList.add('remove--add');
     } else if(!resultUserAd) {
         event.preventDefault();
         document.querySelector('.userAd__err').classList.remove('remove--add');
-        elementsUserAd.value = '';
     };
 
     if(resultUserFix) {
@@ -32,24 +35,66 @@ function submitForm(event) {
     } else if(!resultUserFix) {
         event.preventDefault();
         document.querySelector('.userFixed__err').classList.remove('remove--add');
-        elementsUserFix.value = '';
-    };  
-};
+    };
 
-mainForm.addEventListener('submit', submitForm);
+    if(elementsUserRoom.value.length === 0) {
+        event.preventDefault();
+        document.querySelector('.userRoom__err').classList.remove('remove--add');
+    } else {
+        document.querySelector('.userRoom__err').classList.add('remove--add');
+    };
+
+    if(elementsUserEstate.value.length === 0) {
+        event.preventDefault();
+        document.querySelector('.userEstate__err').classList.remove('remove--add');
+    } else {
+        document.querySelector('.userEstate__err').classList.add('remove--add');
+    };
+
+    if(resultUserDate) {
+        document.querySelector('.userDate__err').classList.add('remove--add');
+    } else if(!resultUserDate) {
+        event.preventDefault();
+        document.querySelector('.userDate__err').classList.remove('remove--add');
+    };
+
+    if(resultUserFrom) {
+        document.querySelector('.userFrom__err').classList.add('remove--add');
+    } else if(!resultUserFrom) {
+        event.preventDefault();
+        document.querySelector('.userFrom__err').classList.remove('remove--add');
+    };
+
+    if(ElementUserPrice.value.length === 0) {
+        event.preventDefault();
+        document.querySelector('.userPrice__err').classList.remove('remove--add');
+    } else {
+        document.querySelector('.userPrice__err').classList.add('remove--add');
+    };
+    
+    if(elementsUserNumberFirst.value.length !== 13) {
+        document.querySelector('.userNumFirst__err').classList.remove('remove--add');
+    } else {
+        document.querySelector('.userNumFirst__err').classList.add('remove--add');
+    }
+
+    if(elementsUserNumberLast.value.length !== 13) {
+        document.querySelector('.userLast__err').classList.remove('remove--add');
+    } else {
+        document.querySelector('.userLast__err').classList.add('remove--add');
+    }
+};
 
 focusEl.forEach((item, index)=> {
     let itemPl = item.placeholder;
 
     item.addEventListener('focus', ()=> {
-        item.placeholder = '';
-       
-        if(index === 7 || index === 8) {
-            item.value = '+998';
-        }
-    })
+        item.placeholder = ''; 
+    });
 
     item.addEventListener('blur', ()=> {
         item.placeholder = itemPl;
     })
 });
+
+mainForm.addEventListener('submit', submitForm);
