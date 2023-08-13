@@ -33,8 +33,8 @@ function addImageFile() {
   updateInput.forEach((item, index)=> {
     if(index >= 4) {
       creatCard.remove();
-      document.querySelector('.card__err').classList.remove('remove--add');
-    }
+      document.querySelector('.card__errMax').classList.remove('remove--add');
+    };
 
     if(index === 0) {
       imageCard.forEach(item=> item.remove());

@@ -1,6 +1,7 @@
 import './btn.js';
 import './imgFile.js';
 import './number.js';
+import './numberDown.js';
 
 const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
@@ -14,6 +15,7 @@ const ElementUserFrom = elements.userFrom;
 const ElementUserPrice = elements.userPrice;
 const elementsUserNumberFirst = elements.userNumberFirst;
 const elementsUserNumberLast = elements.userNumberLast;
+
 
 function submitForm(event) {
     // regex date //
@@ -72,17 +74,17 @@ function submitForm(event) {
         document.querySelector('.userPrice__err').classList.add('remove--add');
     };
     
-    if(elementsUserNumberFirst.value.length !== 13) {
+    if(elementsUserNumberFirst.value.length >= 13) {
         document.querySelector('.userNumFirst__err').classList.remove('remove--add');
-    } else {
+    } else if(!elementsUserNumberFirst.value.length !== 13) {
         document.querySelector('.userNumFirst__err').classList.add('remove--add');
-    }
+    };
 
-    if(elementsUserNumberLast.value.length !== 13) {
+     if(elementsUserNumberLast.value.length !== 13) {
         document.querySelector('.userLast__err').classList.remove('remove--add');
-    } else {
+    } else if(!elementsUserNumberLast.value.length !== 13){
         document.querySelector('.userLast__err').classList.add('remove--add');
-    }
+    };
 };
 
 focusEl.forEach((item, index)=> {
@@ -94,7 +96,15 @@ focusEl.forEach((item, index)=> {
 
     item.addEventListener('blur', ()=> {
         item.placeholder = itemPl;
-    })
+    });
 });
 
 mainForm.addEventListener('submit', submitForm);
+
+// const element = document.getElementById('selector');
+const maskOptions = {
+  mask: '+998(00)-000-0000',
+  lazy: false
+};
+const mask = new IMask(elementsUserNumberFirst, maskOptions);
+const mask02 = new IMask(elementsUserNumberLast, maskOptions);
