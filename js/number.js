@@ -15,10 +15,11 @@ function toggleNum() {
     formNumberLastEl.classList.add("form-number__last");
     formNumberLastEl.innerHTML = `
       <label for="userNumberLast">Qo'shimcha telefon raqamingiz</label>
-      <input tabindex="10" type="tel" class="focus user-number__last"  name="userNumberLast" placeholder="Masalan, “99 123 45 67”.">
+      <input tabindex="10" type="tel" class="user-number__last"  name="userNumberLast" placeholder="Masalan, “99 123 45 67”.">
       <p class="userLast__err error__text remove--add">Telefon raqam kiriting!</p>
     `;
     const inputNumeLast = mainForm.userNumberLast;
+    let itemPl = inputNumeLast.placeholder;
 
     mainForm.addEventListener("submit", (e) => {
       if (document.querySelector(".userLast__err") != null) {
@@ -39,11 +40,14 @@ function toggleNum() {
     };
 
     const mask2 = IMask(inputNumeLast, maskOptions);
+    inputNumeLast.addEventListener('focus', ()=> inputNumeLast.placeholder = '');
+    inputNumeLast.addEventListener('blur', ()=> inputNumeLast.placeholder = itemPl);
     toggle = true;
   } else if (toggle) {
     formNumberLast.remove();
     toggle = false;
   }
 }
+
 
 formNumberFirst.addEventListener("click", toggleNum);

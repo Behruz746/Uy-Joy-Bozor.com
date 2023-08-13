@@ -5,7 +5,6 @@ import './numberDown.js';
 
 const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
-const focusEl = document.querySelectorAll('.focus');
 const elementsUserAd = elements.userAd;
 const elementsNameFile = elements.nameFile;
 const elementsUserRoom = elements.userRoom;
@@ -16,7 +15,7 @@ const ElementUserFrom = elements.userFrom;
 const ElementUserPrice = elements.userPrice;
 const elementsUserNumberFirst = elements.userNumberFirst;
 const elementsUserNumberLast = elements.userNumberLast;
-
+const focusEl = document.querySelectorAll('.focus');
 
 function submitForm(event) {
     // regex date //
@@ -85,24 +84,20 @@ function submitForm(event) {
 
 focusEl.forEach((item)=> {
     let itemPl = item.placeholder;
-
+  
     item.addEventListener('focus', ()=> {
-        item.placeholder = ''; 
+      item.placeholder = ''; 
     });
-
+  
     item.addEventListener('blur', ()=> {
-        item.placeholder = itemPl;
+      item.placeholder = itemPl;
     });
-});
+  });
 
 const maskOptions = {
     mask: '+998 00 000 0000',
     lazy: true,
 };
-
-
   
 const mask = IMask(elementsUserNumberFirst, maskOptions);
-// const mask2 = IMask(elementsUserNumberLast, maskOptions);
-
 mainForm.addEventListener('submit', submitForm);
