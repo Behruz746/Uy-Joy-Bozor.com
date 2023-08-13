@@ -99,12 +99,13 @@ focusEl.forEach((item, index)=> {
     });
 });
 
-mainForm.addEventListener('submit', submitForm);
 
-// const element = document.getElementById('selector');
 const maskOptions = {
-  mask: '+998(00)-000-0000',
-  lazy: false
+    mask: '+998 00 000 0000',
+    lazy: false
 };
-const mask = new IMask(elementsUserNumberFirst, maskOptions);
-const mask02 = new IMask(elementsUserNumberLast, maskOptions);
+  
+const mask = IMask(elementsUserNumberFirst, maskOptions);
+const mask02 = IMask(elementsUserNumberLast, maskOptions);
+
+mainForm.addEventListener('submit', submitForm);
