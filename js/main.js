@@ -74,20 +74,15 @@ function submitForm(event) {
         document.querySelector('.userPrice__err').classList.add('remove--add');
     };
     
-    if(elementsUserNumberFirst.value.length >= 13) {
+    if(elementsUserNumberFirst.value.length === 0) {
+        event.preventDefault();
         document.querySelector('.userNumFirst__err').classList.remove('remove--add');
-    } else if(!elementsUserNumberFirst.value.length !== 13) {
+    } else {
         document.querySelector('.userNumFirst__err').classList.add('remove--add');
-    };
-
-     if(elementsUserNumberLast.value.length !== 13) {
-        document.querySelector('.userLast__err').classList.remove('remove--add');
-    } else if(!elementsUserNumberLast.value.length !== 13){
-        document.querySelector('.userLast__err').classList.add('remove--add');
     };
 };
 
-focusEl.forEach((item, index)=> {
+focusEl.forEach((item)=> {
     let itemPl = item.placeholder;
 
     item.addEventListener('focus', ()=> {
@@ -99,10 +94,9 @@ focusEl.forEach((item, index)=> {
     });
 });
 
-
 const maskOptions = {
     mask: '+998 00 000 0000',
-    lazy: false
+    lazy: true,
 };
   
 const mask = IMask(elementsUserNumberFirst, maskOptions);
