@@ -7,6 +7,7 @@ const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
 const focusEl = document.querySelectorAll('.focus');
 const elementsUserAd = elements.userAd;
+const elementsNameFile = elements.nameFile;
 const elementsUserRoom = elements.userRoom;
 const elementsUserEstate = elements.userEstate;
 const elementsUserFix = elements.userFix;
