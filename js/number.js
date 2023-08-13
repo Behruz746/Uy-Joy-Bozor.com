@@ -1,25 +1,35 @@
 const mainForm = document.forms.mainForm;
-const userNumberLast = document.querySelector('.user-number__last');
+const userNumberLast = document.querySelector(".user-number__last");
 const formNumberFirst = document.querySelector(".form-number__first img");
-const formNumberLast = document.querySelector(".form-number__last");
+
+const userLastErr = document.querySelector(".userLast__err");
+const formNumberRow = document.querySelector('.form-number__row');
 
 let toggle = false;
 function toggleNum() {
+  const formNumberLastEl = document.createElement('div');
+  formNumberRow.appendChild(formNumberLastEl);
+  const formNumberLast = document.querySelector(".form-number__last");
+
   if (!toggle) {
-    formNumberLast.classList.remove("remove--add");
+    formNumberLastEl.style.marginTop = '30px';
+    formNumberLastEl.classList.add('form-number__last');
+    formNumberLastEl.innerHTML = `
+      <label for="userNumberLast">Qo'shimcha telefon raqamingiz</label>
+      <input tabindex="10" type="tel" class="focus user-number__last"  name="userNumberLast" placeholder="Masalan, “99 123 45 67”.">
+      <p class="userLast__err error__text remove--add">Telefon raqam kiriting!</p>
+    `;
 
-    mainForm.addEventListener("submit", (event) => {
-      if (userNumberLast.value.length === 0) {
-        event.preventDefault();
-        document.querySelector(".userLast__err").classList.remove("remove--add");
-      } else {
-        document.querySelector(".userLast__err").classList.add("remove--add");
-      };
-    });
+    const inputNumeLast = mainForm.userNumberLast;
+    const maskOptions = {
+      mask: '+998 00 000 0000',
+      lazy: true,
+    };
 
+    const mask2 = IMask(inputNumeLast, maskOptions);
     toggle = true;
   } else if (toggle) {
-    formNumberLast.classList.add("remove--add");
+    formNumberLast.remove();
     toggle = false;
   }
 }

@@ -74,7 +74,7 @@ function submitForm(event) {
         document.querySelector('.userPrice__err').classList.add('remove--add');
     };
     
-    if(elementsUserNumberFirst.value.length === 0) {
+    if(elementsUserNumberFirst.value.length <= 13) {
         event.preventDefault();
         document.querySelector('.userNumFirst__err').classList.remove('remove--add');
     } else {
@@ -98,8 +98,10 @@ const maskOptions = {
     mask: '+998 00 000 0000',
     lazy: true,
 };
+
+
   
 const mask = IMask(elementsUserNumberFirst, maskOptions);
-const mask02 = IMask(elementsUserNumberLast, maskOptions);
+// const mask2 = IMask(elementsUserNumberLast, maskOptions);
 
 mainForm.addEventListener('submit', submitForm);
