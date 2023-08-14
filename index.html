@@ -17,11 +17,12 @@
                     telegram <br> guruhiga e’lon joylash uchun ushbu bo’limlarni to’ldiring!
                 </h1>
             </div>
-            <div class="data__name">
+
+            <div class="data__name form__row">
                 <h3>Siz qanday e’lon joylamoqchisiz?</h3>
                 <div class="data__btns">
-                    <button class="data__btn01 out">Uy, hovli-joy</button>
-                    <button class="data__btn02 over">Avto e’lon</button>
+                    <button type="button" class="data__btn01 out">Uy, hovli-joy</button>
+                    <button type="button" class="data__btn02 over">Avto e’lon</button>
                 </div>
             </div>
             <form name="mainForm" class="form__data" action="#">
@@ -40,7 +41,6 @@
                         <div class="image__card remove--card"></div>
                     </div>
                     <p class="card__errMax error__text remove--add">Maksimal 5ta surat yuklash mumkin</p>
-                    <p class="card__errMin error__text remove--add">Maksimal 5ta surat yuklash mumkin</p>
                     <div class="form-adTitle__row form__row">
                         <label for="userAd">E’lon sarlavhasi </label>
                         <input tabindex="2" type="text" class="focus" name="userAd" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.">
@@ -55,17 +55,17 @@
                         </select>
                         <p class="userSelect__err error__text remove--add">Bo’limni tanlang yozing!</p>
                     </div>
-                    <div class="form-room__row form__row">
+                    <div class="form-room__row form__row remove--active">
                         <label for="userRoom">Xonalar soni nechta</label>
                         <input tabindex="4" type="number" class="focus" min="1" max="100" name="userRoom" placeholder="Masalan, “5ta”.">
                         <p class="userRoom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
                     </div>
-                    <div class="form-estate__row form__row">
+                    <div class="form-estate__row form__row remove--active">
                         <label for="userEstate">Tomorqa o’lchami, nechi sotix?</label>
                         <input tabindex="4" type="number" class="focus" min="1" max="100" name="userEstate" placeholder="Masalan, “8 sotix”.">
                         <p class="userEstate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
                     </div>
-                    <div class="form-fixed__row form__row">
+                    <div class="form-fixed__row form__row remove--active">
                         <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
                         <input tabindex="5" type="text" class="focus" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
                         <p class="userFixed__err error__text remove--add">Remonti haqida ma’lumot kiriting!</p>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="form-submit__row">
-                    <button type="submit">E’lonni joylash</button>
+                    <button tabindex="10" type="submit">E’lonni joylash</button>
                 </div>
             </form>
         </div>

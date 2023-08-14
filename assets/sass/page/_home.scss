@@ -34,6 +34,7 @@
 }
 
 .form__data {
+    // display: none;
     width: 100%;
     margin-top: 30px;
 
@@ -96,7 +97,7 @@
 .main-form__colume {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px !important;
 }
 
 .form-image__row {
@@ -166,6 +167,7 @@
 }
 
 .form__row {
+    margin-top: 30px;
     width: 100%;
 
     label {
@@ -197,7 +199,7 @@
         width: 100%;
         margin: 10px 0;
         width: 100%;
-        padding: 13px 20px;
+        padding: 10px 20px;
         border-radius: 6px;
         -moz-appearance: none; /* Firefox */
         -webkit-appearance: none; /* Safari and Chrome */
@@ -261,8 +263,3 @@
         color: #fff;
     }
 }
-
-// .form-price__row {
-//     display: flex;
-//     flex-direction: column;
-// }
