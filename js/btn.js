@@ -56,4 +56,4 @@ const overBtnLast = () => {
 btnFirst.addEventListener("mouseover", overBtn);
 btnLast.addEventListener("mouseover", overBtnLast);
 btnFirst.addEventListener("click", homeDateSubmit);
-btnLast.addEventListener("click", carDateSubmit);
+btnLast.addEventListener("click", carDateSubmit);  
