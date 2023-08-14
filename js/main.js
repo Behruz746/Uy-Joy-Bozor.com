@@ -13,21 +13,26 @@ const elementsNameFile = elements.nameFile;
 const elementsUserRoom = elements.userRoom;
 const elementsUserEstate = elements.userEstate;
 const elementsUserFix = elements.userFix;
-const ElementUserDate = elements.userDate;
-const ElementUserFrom = elements.userFrom;
-const ElementUserPrice = elements.userPrice;
+
+const elementUserDate = elements.userDate;
+const elementUserFrom = elements.userFrom;
+const elementUserPrice = elements.userPrice;
 const elementsUserNumberFirst = elements.userNumberFirst;
 const elementsUserNumberLast = elements.userNumberLast;
+
 
 const focusEl = document.querySelectorAll(".focus");
 
 function submitForm(event) {
+  
+
   // regex date //
   let regex = /^[a-zA-Z0-9а-яА-Я\s]{10,}$/;
   let resultUserAd = regex.test(elementsUserAd.value);
   let resultUserFix = regex.test(elementsUserFix.value);
-  let resultUserDate = regex.test(ElementUserDate.value);
-  let resultUserFrom = regex.test(ElementUserFrom.value);
+  let resultUserDate = regex.test(elementUserDate.value);
+  let resultUserFrom = regex.test(elementUserFrom.value);
+
 
   if (resultUserAd) {
     document.querySelector(".userAd__err").classList.add("remove--add");
@@ -77,7 +82,7 @@ function submitForm(event) {
     document.querySelector(".userFrom__err").classList.remove("remove--add");
   }
 
-  if (ElementUserPrice.value.length === 0) {
+  if (elementUserPrice.value.length === 0) {
     event.preventDefault();
     document.querySelector(".userPrice__err").classList.remove("remove--add");
   } else {
