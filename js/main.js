@@ -17,6 +17,7 @@ const elementsUserNumberFirst = elements.userNumberFirst;
 const elementsUserNumberLast = elements.userNumberLast;
 const focusEl = document.querySelectorAll('.focus');
 
+
 function submitForm(event) {
     // regex date //
     let regex = /^[a-zA-Z0-9а-яА-Я\s]{10,}$/;
@@ -82,8 +83,24 @@ function submitForm(event) {
     };
 };
 
-focusEl.forEach((item)=> {
+const maskOptions = {
+    mask: '+998 00 000 0000',
+    lazy: true,
+};
+  
+const mask = IMask(elementsUserNumberFirst, maskOptions);
+
+
+
+
+focusEl.forEach((item, index)=> {
     let itemPl = item.placeholder;
+
+    if(index === 7) {
+        item.addEventListener('focus', ()=> {
+            mask.value = '+998' + elementsUserNumberFirst.value.slice(5,);
+        });
+    }
   
     item.addEventListener('focus', ()=> {
       item.placeholder = ''; 
@@ -92,12 +109,7 @@ focusEl.forEach((item)=> {
     item.addEventListener('blur', ()=> {
       item.placeholder = itemPl;
     });
-  });
+});
 
-const maskOptions = {
-    mask: '+998 00 000 0000',
-    lazy: true,
-};
-  
-const mask = IMask(elementsUserNumberFirst, maskOptions);
+
 mainForm.addEventListener('submit', submitForm);

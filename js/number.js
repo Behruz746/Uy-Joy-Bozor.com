@@ -19,7 +19,7 @@ function toggleNum() {
       <p class="userLast__err error__text remove--add">Telefon raqam kiriting!</p>
     `;
     const inputNumeLast = mainForm.userNumberLast;
-    let itemPl = inputNumeLast.placeholder;
+    let itemPl = inputNumeLast.value;
 
     mainForm.addEventListener("submit", (e) => {
       if (document.querySelector(".userLast__err") != null) {
@@ -40,8 +40,11 @@ function toggleNum() {
     };
 
     const mask2 = IMask(inputNumeLast, maskOptions);
-    inputNumeLast.addEventListener('focus', ()=> inputNumeLast.placeholder = '');
-    inputNumeLast.addEventListener('blur', ()=> inputNumeLast.placeholder = itemPl);
+
+    inputNumeLast.addEventListener('focus', ()=> {
+      mask2.value = '+998' + inputNumeLast.value.slice(5,);
+    });
+    
     toggle = true;
   } else if (toggle) {
     formNumberLast.remove();
