@@ -17,16 +17,15 @@
                     telegram <br> guruhiga e’lon joylash uchun ushbu bo’limlarni to’ldiring!
                 </h1>
             </div>
-
-            <div class="data__name form__row">
-                <h3>Siz qanday e’lon joylamoqchisiz?</h3>
-                <div class="data__btns">
-                    <button type="button" class="data__btn01 over">Uy, hovli-joy</button>
-                    <button type="button" class="data__btn02 out">Avto e’lon</button>
-                </div>
-            </div>
             <form name="mainForm" class="form__data" action="#">
                 <div class="main-form__colume">
+                    <div class="data__name">
+                        <h3>Siz qanday e’lon joylamoqchisiz?</h3>
+                        <div class="data__btns">
+                            <button type="button" class="data__btn01 over">Uy, hovli-joy</button>
+                            <button type="button" class="data__btn02 out">Avto e’lon</button>
+                        </div>
+                    </div>
                     <div class="form-image__row">
                         <div class="creat--card">
                             <div class="card__icon">
@@ -85,6 +84,7 @@
                         <input tabindex="8" type="text" class="focus" name="userPrice" placeholder="Masalan, “$40,000 kelishamiz”.">
                         <p class="userPrice__err error__text remove--add">Narxini kiriting!</p>
                     </div>
+
                     <div class="form-number__row form__row">
                         <div class="form-number__first">
                             <label for="userNumberFirst">Telefon raqamingiz?</label>
@@ -95,9 +95,15 @@
                             <p class="userNumFirst__err error__text remove--add">Telefon raqam kiriting!</p>
                         </div>
                     </div>
+
+                    <div class="form-UserNickName__row form__row">
+                        <label for="userNickName">Telegram username</label>
+                        <input tabindex="11" type="text" name="userNickName" class="focus" placeholder="Masalan, “@Behruz983”.">
+                    </div>
+
                 </div>
                 <div class="form-submit__row">
-                    <button tabindex="10" type="submit">E’lonni joylash</button>
+                    <button tabindex="12" type="submit">E’lonni joylash</button>
                 </div>
             </form>
         </div>

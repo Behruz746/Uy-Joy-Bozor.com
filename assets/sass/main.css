@@ -101,7 +101,7 @@ body .container {
 }
 
 .data__name {
-  margin-top: 50px;
+  margin-top: 0px;
   max-width: 344px;
   width: 100%;
   display: flex;
@@ -141,6 +141,8 @@ body .container {
 }
 
 .form-image__row {
+  margin-top: 39px;
+  margin-bottom: 10px;
   max-width: 800px;
   width: 100%;
   display: flex;
@@ -334,7 +336,7 @@ body .container {
     font-size: 14px !important;
   }
   .data__name {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .creat--card {
     width: 300px;

@@ -11,6 +11,7 @@ const removeEls = document.querySelectorAll('.remove--active');
 const selectionOptins = document.querySelectorAll('.selectionOptins');
 
 function homeDateSubmit() {
+  location.reload();
   elementsUserAd.placeholder = "Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.";
   elementsSelectHomeLabel.textContent = 'Qanday xonadon?';
     removeEls.forEach((item, index)=> {
@@ -49,39 +50,58 @@ function homeDateSubmit() {
 }
 
 function carDateSubmit() {
-  let regex = /^[a-zA-Z0-9а-яА-Я\s]{10,}$/;
+  let regex = /^[a-zA-Z0-9а-яА-Я\s]{5,}$/;
   elementsUserAd.placeholder = "Masalan, “Nexia 3 sotiladi”.";
   elementsSelectHomeLabel.textContent = 'Katergoriyani tanlang?';
+
+  const focusEl = document.querySelectorAll('.focus');
+
+ 
 
   removeEls.forEach((item, index)=> {
     if(index === 0) {
       item.innerHTML = `
         <label for="userCarYear">Mashina yili</label>
-        <input tabindex="4" type="text" class="focus" name="userCarYear" placeholder="Masalan, “2013”.">
+        <input tabindex="3" type="text" class="focus" name="userCarYear" placeholder="Masalan, “2013”.">
         <p class="userCar__err error__text remove--add">Yili haqida ma’lumot kiriting!</p>
       `;  
       item.style.display = 'block';
     } else if(index === 1) {
       item.innerHTML = `
         <label for="userCarKm">Mashina qancha yurgan? (Probegi)</label>
-        <input tabindex="5" type="text" class="focus" name="userCarKm" placeholder="Namuna: 100,000 km yurgan">
+        <input tabindex="4" type="text" class="focus" name="userCarKm" placeholder="Namuna: 100,000 km yurgan">
         <p class="userCarKm__err error__text remove--add">Mashina qancha yurgani haqida ma’lumot kiriting!</p>
       `;  
 
     } else if(index === 2) {
       item.innerHTML = `
         <label for="userCarColor">Rangi (kraskasi)?</label>
-        <input tabindex="6" type="text" class="focus" name="userCarColor" placeholder="Urilgan turtilgan, kraska qilinganini yozing">
+        <input tabindex="5" type="text" class="focus" name="userCarColor" placeholder="Urilgan turtilgan, kraska qilinganini yozing">
         <p class="userCarColor__err error__text remove--add">Mashina rangi haqida ma’lumot kiriting!</p>
       `;  
       item.style.display = 'block';
     } else if (index === 3) {
       item.innerHTML = `
         <label for="userCarOil">Yoqilgʻisi?</label>
-        <input tabindex="7" type="text" class="focus" name="userCarOil" placeholder="mashina binzendami yoki gazda yuradimi shuni yozing">
+        <input tabindex="6" type="text" class="focus" name="userCarOil" placeholder="mashina binzendami yoki gazda yuradimi shuni yozing">
         <p class="userCarOil__err error__text remove--add">Mashina yoqilgʻisi haqida ma’lumot kiriting!</p>
       `;
     };
+  });
+
+  focusEl.forEach((item, index) => {
+    let itemPl = item.placeholder;
+    console.log(item);
+
+    item.addEventListener("focus", () => {
+      item.placeholder = '';
+      console.log('reed');
+    });
+
+    item.addEventListener("blur", () => {
+      item.placeholder = itemPl;
+    });
+    
   });
 
   mainForm.addEventListener("submit", (e) => {
@@ -97,11 +117,11 @@ function carDateSubmit() {
         document.querySelector(".userCar__err").classList.remove("remove--add");
       }
 
-      if(regex.test(elemntsUserCarKm.value)) {
-        document.querySelector(".userCarKm__err").classList.add("remove--add");
-      } else {
+      if(elemntsUserCarKm.value.length === 0) {
         e.preventDefault();
         document.querySelector(".userCarKm__err").classList.remove("remove--add");
+      } else {
+        document.querySelector(".userCarKm__err").classList.add("remove--add");
       }
 
       if(regex.test(elemntsUserCarColor.value)) {

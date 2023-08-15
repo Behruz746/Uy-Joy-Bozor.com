@@ -27,7 +27,7 @@ function submitForm(event) {
   
 
   // regex date //
-  let regex = /^[a-zA-Z0-9а-яА-Я\s]{10,}$/;
+  let regex = /^[a-zA-Z0-9а-яА-Я\s]{5,}$/;
   let resultUserAd = regex.test(elementsUserAd.value);
   let resultUserFix = regex.test(elementsUserFix.value);
   let resultUserDate = regex.test(elementUserDate.value);
