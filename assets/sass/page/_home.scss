@@ -267,7 +267,7 @@
 .textDate {
     max-width: 760px;
     width: 100%;
-    // height: 200px;
+    height: 52px;
     margin: 10px 0;
     width: 100%;
     padding: 13px 20px;
@@ -275,7 +275,7 @@
     border: 1px solid #2C3E50;
     background-color: $whiteColor;
     resize: none;   
-
+    font-family: 'San Francisco Pro';
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

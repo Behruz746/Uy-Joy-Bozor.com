@@ -6,6 +6,7 @@ const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
 const elementsUserAd = elements.userAd;
 const elementsSelectHomeLabel = document.querySelector('.active--label');
+const elementUserDate = elements.userDate;
 
 const removeEls = document.querySelectorAll('.remove--active');
 const selectionOptins = document.querySelectorAll('.selectionOptins');
@@ -13,6 +14,7 @@ const selectionOptins = document.querySelectorAll('.selectionOptins');
 function homeDateSubmit() {
   location.reload();
   elementsUserAd.placeholder = "Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.";
+  elementUserDate.placeholder = "Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.";
   elementsSelectHomeLabel.textContent = 'Qanday xonadon?';
     removeEls.forEach((item, index)=> {
 
@@ -52,11 +54,9 @@ function homeDateSubmit() {
 function carDateSubmit() {
   let regex = /^[a-zA-Z0-9а-яА-Я\s]{5,}$/;
   elementsUserAd.placeholder = "Masalan, “Nexia 3 sotiladi”.";
+  elementUserDate.placeholder = "Masalan, “Mashinagizni qulayliklari va boshqa narsalar yozing”.";
   elementsSelectHomeLabel.textContent = 'Katergoriyani tanlang?';
-
   const focusEl = document.querySelectorAll('.focus');
-
- 
 
   removeEls.forEach((item, index)=> {
     if(index === 0) {

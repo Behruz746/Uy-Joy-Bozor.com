@@ -309,6 +309,7 @@ body .container {
 .textDate {
   max-width: 760px;
   width: 100%;
+  height: 52px;
   margin: 10px 0;
   width: 100%;
   padding: 13px 20px;
@@ -316,6 +317,7 @@ body .container {
   border: 1px solid #2C3E50;
   background-color: #ffffff;
   resize: none;
+  font-family: "San Francisco Pro";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
