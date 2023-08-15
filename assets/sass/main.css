@@ -306,6 +306,44 @@ body .container {
   color: #fff;
 }
 
+.textDate {
+  max-width: 760px;
+  width: 100%;
+  margin: 10px 0;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 6px;
+  border: 1px solid #2C3E50;
+  background-color: #ffffff;
+  resize: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #000;
+}
+.textDate::-moz-placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+.textDate:-ms-input-placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+.textDate::placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7F8C8D;
+}
+
 @media screen and (max-width: 825px) {
   .form-image__row {
     justify-content: center;
@@ -357,6 +395,9 @@ body .container {
   }
   .remove--card {
     display: none;
+  }
+  .form__row {
+    margin-top: 15px;
   }
   .form__row label {
     font-size: 16px;
