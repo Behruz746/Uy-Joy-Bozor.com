@@ -420,6 +420,18 @@ body .container {
     padding: 9px 16px !important;
     font-size: 14px !important;
   }
+  .textDate {
+    font-size: 14px !important;
+  }
+  .textDate::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  .textDate:-ms-input-placeholder {
+    font-size: 14px !important;
+  }
+  .textDate::placeholder {
+    font-size: 14px !important;
+  }
   .input__box {
     padding: 0 20px !important;
   }

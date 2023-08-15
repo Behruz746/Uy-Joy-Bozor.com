@@ -34,10 +34,6 @@ function addImageFile() {
         }
       });
     })
-
-
-
-    
   );
 
   updateInput.forEach((item, index) => {
