@@ -9,6 +9,43 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .pay__cardCode {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        h3 {
+            max-width: 250px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .pay__copyCode {
+            h4 {
+                background-color: #ECF0F1;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .pay__numberEl {
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    .pay__text {
+        font-size: 16px;
+    }
+
+    .pay__description {
+        h3 {
+            font-size: 14px;
+        }
+    }
+}
+
 @media screen and (max-width: 430px) {
     .container {
         padding: 20px 10px !important;
@@ -104,6 +141,13 @@
                 font-size: 14px !important; 
             }
         }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pay__numbers {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
