@@ -18,6 +18,10 @@ const elementsUserNumberLast = elements.userNumberLast;
 const focusEl = document.querySelectorAll(".focus");
 
 function submitForm(event) {
+  event.preventDefault();
+  const formDate = new FormData(mainForm);
+  const formDateObject = Object.fromEntries(formDate.entries());
+
   // regex date //
   let regex = /^[a-zA-Z0-9а-яА-Я\s]{5,}$/;
   let resultUserAd = regex.test(elementsUserAd.value);
@@ -90,7 +94,29 @@ function submitForm(event) {
   } else {
     document.querySelector(".userNumFirst__err").classList.add("remove--add");
   }
-}
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "#"); // backend server URL
+  xhr.setRequestHeader("Content-Type", "application/json"); 
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.readyState == 4 && xhr.status ===  200 && resultUserAd && resultUserFix && resultUserDate && resultUserFrom) {
+        var response = JSON.parse(xhr.responseText);
+        console.log(response);
+      } else if (xhr.readyState == 4) {
+        window.location = "http://127.0.0.1:5501/pay.html";
+        console.error("Backendga so'rovda xatolik yuz berdi. ERROR");
+      }
+    }
+  };
+
+  var jsonData = JSON.stringify(Object.fromEntries(formDate));
+  console.log(jsonData); // Json
+  console.log(formDateObject); // Object 
+
+  xhr.send(formDate);
+};
 
 const maskOptions = {
   mask: "+998 00 000 0000",

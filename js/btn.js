@@ -5,21 +5,22 @@ const btnLast = document.querySelector(".data__btn02");
 const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
 const elementsUserAd = elements.userAd;
-const elementsSelectHomeLabel = document.querySelector('.active--label');
+const elementsSelectHomeLabel = document.querySelector(".active--label");
 const elementUserDate = elements.userDate;
 
-const removeEls = document.querySelectorAll('.remove--active');
-const selectionOptins = document.querySelectorAll('.selectionOptins');
+const removeEls = document.querySelectorAll(".remove--active");
+const selectionOptins = document.querySelectorAll(".selectionOptins");
 
 function homeDateSubmit() {
   location.reload();
-  elementsUserAd.placeholder = "Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.";
-  elementUserDate.placeholder = "Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.";
-  elementsSelectHomeLabel.textContent = 'Qanday xonadon?';
-    removeEls.forEach((item, index)=> {
-
-      if(index === 0) {
-        item.innerHTML = `
+  elementsUserAd.placeholder =
+    "Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.";
+  elementUserDate.placeholder =
+    "Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”.";
+  elementsSelectHomeLabel.textContent = "Qanday xonadon?";
+  removeEls.forEach((item, index) => {
+    if (index === 0) {
+      item.innerHTML = `
           <label for="selectHome" class="active--label">Qanday xonadon?</label>
           <select tabindex="3" name="selectHome">
               <option selected value="hovli-joy" class="selectionOptins">Hovli joy</option>
@@ -28,80 +29,64 @@ function homeDateSubmit() {
           </select>
           <p class="userSelect__err error__text remove--add">Bo’limni tanlang yozing!</p>
         `;
-      } else if(index === 1) {
-            item.innerHTML = `
+    } else if (index === 1) {
+      item.innerHTML = `
                 <label for="userRoom">Xonalar soni nechta</label>
                 <input tabindex="4" type="number" class="focus" min="1" max="100" name="userRoom" placeholder="Masalan, “5ta”.">
                 <p class="userRoom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
             `;
-        } else if(index === 2) {
-            item.innerHTML = `
+    } else if (index === 2) {
+      item.innerHTML = `
                 <label for="userEstate">Tomorqa o’lchami, nechi sotix?</label>
                 <input tabindex="4" type="number" class="focus" min="1" max="100" name="userEstate" placeholder="Masalan, “8 sotix”.">
                 <p class="userEstate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
             `;
-        } else if(index === 3) {
-            item.innerHTML = `
+    } else if (index === 3) {
+      item.innerHTML = `
                 <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
                 <input tabindex="5" type="text" class="focus" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
                 <p class="userFixed__err error__text remove--add">Remonti haqida ma’lumot kiriting!</p>
             `;
-        }
-        item.style.display = 'block';
-    });
+    }
+    item.style.display = "block";
+  });
 }
 
 function carDateSubmit() {
   let regex = /^[a-zA-Z0-9а-яА-Я\s]{5,}$/;
   elementsUserAd.placeholder = "Masalan, “Nexia 3 sotiladi”.";
-  elementUserDate.placeholder = "Masalan, “Mashinagizni qulayliklari va boshqa narsalar yozing”.";
-  elementsSelectHomeLabel.textContent = 'Katergoriyani tanlang?';
-  const focusEl = document.querySelectorAll('.focus');
+  elementUserDate.placeholder =
+    "Masalan, “Mashinagizni qulayliklari va boshqa narsalar yozing”.";
+  elementsSelectHomeLabel.textContent = "Katergoriyani tanlang?";
 
-  removeEls.forEach((item, index)=> {
-    if(index === 0) {
+  removeEls.forEach((item, index) => {
+    if (index === 0) {
       item.innerHTML = `
         <label for="userCarYear">Mashina yili</label>
         <input tabindex="3" type="text" class="focus" name="userCarYear" placeholder="Masalan, “2013”.">
         <p class="userCar__err error__text remove--add">Yili haqida ma’lumot kiriting!</p>
-      `;  
-      item.style.display = 'block';
-    } else if(index === 1) {
+      `;
+      item.style.display = "block";
+    } else if (index === 1) {
       item.innerHTML = `
         <label for="userCarKm">Mashina qancha yurgan? (Probegi)</label>
         <input tabindex="4" type="text" class="focus" name="userCarKm" placeholder="Namuna: 100,000 km yurgan">
         <p class="userCarKm__err error__text remove--add">Mashina qancha yurgani haqida ma’lumot kiriting!</p>
-      `;  
-
-    } else if(index === 2) {
+      `;
+    } else if (index === 2) {
       item.innerHTML = `
         <label for="userCarColor">Rangi (kraskasi)?</label>
         <input tabindex="5" type="text" class="focus" name="userCarColor" placeholder="Urilgan turtilgan, kraska qilinganini yozing">
         <p class="userCarColor__err error__text remove--add">Mashina rangi haqida ma’lumot kiriting!</p>
-      `;  
-      item.style.display = 'block';
+      `;
+      item.style.display = "block";
     } else if (index === 3) {
       item.innerHTML = `
         <label for="userCarOil">Yoqilgʻisi?</label>
         <input tabindex="6" type="text" class="focus" name="userCarOil" placeholder="mashina binzendami yoki gazda yuradimi shuni yozing">
         <p class="userCarOil__err error__text remove--add">Mashina yoqilgʻisi haqida ma’lumot kiriting!</p>
       `;
-    };
-  });
-
-  focusEl.forEach((item, index) => {
-    let itemPl = item.placeholder;
-    console.log(item);
-
-    item.addEventListener("focus", () => {
-      item.placeholder = '';
-      console.log('reed');
-    });
-
-    item.addEventListener("blur", () => {
-      item.placeholder = itemPl;
-    });
-    
+    }
   });
 
   mainForm.addEventListener("submit", (e) => {
@@ -109,34 +94,38 @@ function carDateSubmit() {
     const elemntsUserCarKm = elements.userCarKm;
     const elemntsUserCarColor = elements.userCarColor;
     const elemntsUserCarOil = elements.userCarOil;
-    
-      if(regex.test(elementsUserCarYear.value)) {
-        document.querySelector(".userCar__err").classList.add("remove--add");
-      } else {
-        e.preventDefault();
-        document.querySelector(".userCar__err").classList.remove("remove--add");
-      }
 
-      if(elemntsUserCarKm.value.length === 0) {
-        e.preventDefault();
-        document.querySelector(".userCarKm__err").classList.remove("remove--add");
-      } else {
-        document.querySelector(".userCarKm__err").classList.add("remove--add");
-      }
+    if (regex.test(elementsUserCarYear.value)) {
+      document.querySelector(".userCar__err").classList.add("remove--add");
+    } else {
+      e.preventDefault();
+      document.querySelector(".userCar__err").classList.remove("remove--add");
+    }
 
-      if(regex.test(elemntsUserCarColor.value)) {
-        document.querySelector(".userCarColor__err").classList.add("remove--add");
-      } else {
-        e.preventDefault();
-        document.querySelector(".userCarColor__err").classList.remove("remove--add");
-      }
+    if (elemntsUserCarKm.value.length === 0) {
+      e.preventDefault();
+      document.querySelector(".userCarKm__err").classList.remove("remove--add");
+    } else {
+      document.querySelector(".userCarKm__err").classList.add("remove--add");
+    }
 
-      if(regex.test(elemntsUserCarOil.value)) {
-        document.querySelector(".userCarOil__err").classList.add("remove--add");
-      } else {
-        e.preventDefault();
-        document.querySelector(".userCarOil__err").classList.remove("remove--add");
-      }
+    if (regex.test(elemntsUserCarColor.value)) {
+      document.querySelector(".userCarColor__err").classList.add("remove--add");
+    } else {
+      e.preventDefault();
+      document
+        .querySelector(".userCarColor__err")
+        .classList.remove("remove--add");
+    }
+
+    if (regex.test(elemntsUserCarOil.value)) {
+      document.querySelector(".userCarOil__err").classList.add("remove--add");
+    } else {
+      e.preventDefault();
+      document
+        .querySelector(".userCarOil__err")
+        .classList.remove("remove--add");
+    }
   });
 }
 
@@ -157,4 +146,4 @@ const overBtnLast = () => {
 btnFirst.addEventListener("mouseover", overBtn);
 btnLast.addEventListener("mouseover", overBtnLast);
 btnFirst.addEventListener("click", homeDateSubmit);
-btnLast.addEventListener("click", carDateSubmit);  
+btnLast.addEventListener("click", carDateSubmit);
