@@ -1,156 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="./assets/sass/main.css">
-    <title>Uy joy bozor.com</title> 
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/sass/main.css" />
+    <title>Uy joy bozor.com</title>
+  </head>
+  <body>
     <div class="container">
-        <div class="data__container">
-            <div class="data__title">
-                <h1>
-                    <span>“Surxon uy-joy va mashina bozori”</span>
-                    telegram <br> guruhiga e’lon joylash uchun ushbu bo’limlarni to’ldiring!
-                </h1>
-            </div>
-            <form name="mainForm" class="form__data" action="#">
-                <div class="main-form__colume">
-                    <div class="data__name">
-                        <h3>Siz qanday e’lon joylamoqchisiz?</h3>
-                        <div class="data__btns">
-                            <button type="button" class="data__btn01 over">Uy, hovli-joy</button>
-                            <button type="button" class="data__btn02 out">Avto e’lon</button>
-                        </div>
-                    </div>
-                    <div class="form-image__row">
-                        <div class="creat--card">
-                            <div class="card__icon">
-                                <img src="./assets/images/svg/pluse01.svg" alt="icon pluse">
-                                <p>Rasm yuklash uchun</p>
-                            </div>
-                            <label for="file-01"></label>
-                            <input tabindex="1" type="file" name="nameFile" id="file-01">
-                        </div>
-                        <div class="image__card remove--card"></div>
-                        <div class="image__card remove--card"></div>
-                        <div class="image__card remove--card"></div>
-                    </div>
-                    <p class="card__errMax error__text remove--add">Maksimal 5ta surat yuklash mumkin</p>
-                    <div class="form-adTitle__row form__row">
-                        <label for="userAd">E’lon sarlavhasi </label>
-                        <input tabindex="2" type="text" class="focus" name="userAd" placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”.">
-                        <p class="userAd__err error__text remove--add">Sarlavha yozing!</p>
-                    </div>
-                    <div class="form-select__row form__row remove--active">
-                        <label for="selectHome" class="active--label">Qanday xonadon?</label>
-                        <select tabindex="3" name="selectHome">
-                            <option selected value="hovli-joy" class="selectionOptins">Hovli joy</option>
-                            <option value="kvartira" class="selectionOptins">Kvartira</option>
-                            <option value="tomorqa" class="selectionOptins">Tomorqa</option>
-                        </select>
-                        <p class="userSelect__err error__text remove--add">Bo’limni tanlang yozing!</p>
-                    </div>
-                    <div class="form-room__row form__row remove--active">
-                        <label for="userRoom">Xonalar soni nechta</label>
-                        <input tabindex="4" type="number" class="focus" min="1" max="100" name="userRoom" placeholder="Masalan, “5ta”.">
-                        <p class="userRoom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
-                    </div>
-                    <div class="form-estate__row form__row remove--active">
-                        <label for="userEstate">Tomorqa o’lchami, nechi sotix?</label>
-                        <input tabindex="4" type="number" class="focus" min="1" max="100" name="userEstate" placeholder="Masalan, “8 sotix”.">
-                        <p class="userEstate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
-                    </div>
-                    <div class="form-fixed__row form__row remove--active">
-                        <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
-                        <input tabindex="5" type="text" class="focus" name="userFix" placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”.">
-                        <p class="userFixed__err error__text remove--add">Remonti haqida ma’lumot kiriting!</p>
-                    </div>
-                    <div class="form-date__row form__row">
-                        <label for="userDate">Qo’shimcha ma’lumot yoki qulayliklar</label>
-                        <textarea tabindex="6" name="userDate" class="textDate focus" placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”."></textarea>
-                        <p class="userDate__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
-                    </div>
-                    <div class="form-from__row form__row">
-                        <label for="userFrom">Manzil qayerda?</label>
-                        <input tabindex="7" type="text" class="focus" name="userFrom" placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”.">
-                        <p class="userFrom__err error__text remove--add">Qo’shimcha ma’lumot kiriting!</p>
-                    </div>
-                    <div class="form-price__row form__row">
-                        <label for="userPrice">Narxi qancha?</label>
-                        <input tabindex="8" type="text" class="focus" name="userPrice" placeholder="Masalan, “$40,000 kelishamiz”.">
-                        <p class="userPrice__err error__text remove--add">Narxini kiriting!</p>
-                    </div>
-                    <div class="form-number__row form__row">
-                        <div class="form-number__first">
-                            <label for="userNumberFirst">Telefon raqamingiz?</label>
-                            <div class="input__box">
-                                <input tabindex="9" type="tel" class="focus" name="userNumberFirst" placeholder="Masalan, “99 123 45 67”.">
-                                <img src="./assets/images/svg/pluse02.svg" alt="phone numbers icon">
-                            </div>
-                            <p class="userNumFirst__err error__text remove--add">Telefon raqam kiriting!</p>
-                        </div>
-                    </div>
-                    <div class="form-UserNickName__row form__row">
-                        <label for="userNickName">Telegram username</label>
-                        <input tabindex="11" type="text" name="userNickName" class="focus" placeholder="Masalan, “@Behruz983”.">
-                    </div>
-                </div>
-                <div class="form-submit__row">
-                    <button tabindex="12" type="submit" name="submitBtn">E’lonni joylash</button>
-                </div>
-            </form>
+      <div class="data__container">
+        <div class="data__title">
+          <h1>
+            <span>“Surxon uy-joy va mashina bozori”</span>
+            telegram <br />
+            guruhiga e’lon joylash uchun ushbu bo’limlarni to’ldiring!
+          </h1>
         </div>
+        <form name="mainForm" class="form__data" action="#">
+          <div class="main-form__colume">
+            <div class="data__name">
+              <h3>Siz qanday e’lon joylamoqchisiz?</h3>
+              <div class="data__btns">
+                <button type="button" class="data__btn01 over">
+                  Uy, hovli-joy
+                </button>
+                <button type="button" class="data__btn02 out">
+                  Avto e’lon
+                </button>
+              </div>
+            </div>
+            <div class="form-image__row">
+              <div class="creat--card">
+                <div class="card__icon">
+                  <img src="./assets/images/svg/pluse01.svg" alt="icon pluse" />
+                  <p>Rasm yuklash uchun</p>
+                </div>
+                <label for="file-01"></label>
+                <input tabindex="1" type="file" name="nameFile" id="file-01" />
+              </div>
+              <div class="image__card remove--card"></div>
+              <div class="image__card remove--card"></div>
+              <div class="image__card remove--card"></div>
+            </div>
+            <p class="card__errMax error__text remove--add">
+              Maksimal 5ta surat yuklash mumkin
+            </p>
+            <div class="form-adTitle__row form__row">
+              <label for="userAd">E’lon sarlavhasi </label>
+              <input
+                tabindex="2"
+                type="text"
+                class="focus"
+                name="userAd"
+                placeholder="Masalan, “Denov tumanida 3 xonalik xonadon sotiladi”."
+              />
+              <p class="userAd__err error__text remove--add">
+                Sarlavha yozing!
+              </p>
+            </div>
+            <div class="form-select__row form__row remove--active">
+              <label for="selectHome" class="active--label"
+                >Qanday xonadon?</label
+              >
+              <select tabindex="3" name="selectHome">
+                <option selected value="hovli-joy" class="selectionOptins">
+                  Hovli joy
+                </option>
+                <option value="kvartira" class="selectionOptins">
+                  Kvartira
+                </option>
+                <option value="tomorqa" class="selectionOptins">Tomorqa</option>
+              </select>
+              <p class="userSelect__err error__text remove--add">
+                Bo’limni tanlang yozing!
+              </p>
+            </div>
+            <div class="form-room__row form__row remove--active">
+              <label for="userRoom">Xonalar soni nechta</label>
+              <input
+                tabindex="4"
+                type="number"
+                class="focus"
+                min="1"
+                max="100"
+                name="userRoom"
+                placeholder="Masalan, “5ta”."
+              />
+              <p class="userRoom__err error__text remove--add">
+                Qo’shimcha ma’lumot kiriting!
+              </p>
+            </div>
+            <div class="form-estate__row form__row remove--active">
+              <label for="userEstate">Tomorqa o’lchami, nechi sotix?</label>
+              <input
+                tabindex="4"
+                type="number"
+                class="focus"
+                min="1"
+                max="100"
+                name="userEstate"
+                placeholder="Masalan, “8 sotix”."
+              />
+              <p class="userEstate__err error__text remove--add">
+                Qo’shimcha ma’lumot kiriting!
+              </p>
+            </div>
+            <div class="form-fixed__row form__row remove--active">
+              <label for="userFix">Remont. Xonadan qachon tamirlangan?</label>
+              <input
+                tabindex="5"
+                type="text"
+                class="focus"
+                name="userFix"
+                placeholder="Masalan, “Yaqinda ta’mirdan chiqqan. Biroz kamchiliklari bor”."
+              />
+              <p class="userFixed__err error__text remove--add">
+                Remonti haqida ma’lumot kiriting!
+              </p>
+            </div>
+            <div class="form-date__row form__row">
+              <label for="userDate">Qo’shimcha ma’lumot yoki qulayliklar</label>
+              <textarea
+                tabindex="6"
+                name="userDate"
+                class="textDate focus"
+                placeholder="Masalan, “Hovlingizni qulayliklari va boshqa narsalar yozing”."
+              ></textarea>
+              <p class="userDate__err error__text remove--add">
+                Qo’shimcha ma’lumot kiriting!
+              </p>
+            </div>
+            <div class="form-from__row form__row">
+              <label for="userFrom">Manzil qayerda?</label>
+              <input
+                tabindex="7"
+                type="text"
+                class="focus"
+                name="userFrom"
+                placeholder="Masalan, “Surxondaryo vil., Denov tum., Alovuddin mahallasi, Chiroq ko’chasi 75-uy”."
+              />
+              <p class="userFrom__err error__text remove--add">
+                Qo’shimcha ma’lumot kiriting!
+              </p>
+            </div>
+            <div class="form-price__row form__row">
+              <label for="userPrice">Narxi qancha?</label>
+              <input
+                tabindex="8"
+                type="text"
+                class="focus"
+                name="userPrice"
+                placeholder="Masalan, “$40,000 kelishamiz”."
+              />
+              <p class="userPrice__err error__text remove--add">
+                Narxini kiriting!
+              </p>
+            </div>
+            <div class="form-number__row form__row">
+              <div class="form-number__first">
+                <label for="userNumberFirst">Telefon raqamingiz?</label>
+                <div class="input__box">
+                  <input
+                    tabindex="9"
+                    type="tel"
+                    class="focus"
+                    name="userNumberFirst"
+                    placeholder="Masalan, “99 123 45 67”."
+                  />
+                  <img
+                    src="./assets/images/svg/pluse02.svg"
+                    alt="phone numbers icon"
+                  />
+                </div>
+                <p class="userNumFirst__err error__text remove--add">
+                  Telefon raqam kiriting!
+                </p>
+              </div>
+            </div>
+            <div class="form-UserNickName__row form__row">
+              <label for="userNickName">Telegram username</label>
+              <input
+                tabindex="11"
+                type="text"
+                name="userNickName"
+                class="focus"
+                placeholder="Masalan, “@Behruz983”."
+              />
+            </div>
+          </div>
+          <div class="form-submit__row">
+            <button tabindex="12" type="submit" name="submitBtn">
+              E’lonni joylash
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="container remove--add" id="pay-container">
-        <div class="data__container">
-
-            <div class="data__title">
-                <h1>
-                    <span>“Surxon uy-joy va mashina bozori”</span>
-                    telegram guruhiga e’loningiz chiqishi uchun quyidagi kartaga 50,000 so’m to’lovni amalga oshirishingiz kerak!
-                </h1>
-            </div>
-
-            <div class="pay__cardCode">
-                <h3>To’lov qilish uchun karta raqami:</h3>
-
-                <div class="pay__copyCode">
-                    <h4 id="card-code">9860030347340058</h4>
-                    <button type="button" id="textCopy-btn">
-                        <img src="./assets/images/svg/copeIcon.svg" alt="copy icon" id="copy-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="pay__numbers">
-                <div class="pay__numberEl">
-                    <h3 id="pay-number">0001</h3>
-                </div>
-
-                <h2 class="error__text">Ushbu maxsus raqamni aslo unutmang va adminga ayting, aks holda e’loningizni topa olmaymiz!</h2>
-            </div>
-
-            <h3 class="pay__text">Yuqoridagi kartaga to’lov qiling, chekni va maxsus raqamni bizga yuboring. </h3>
-
-            <div class="form-submit__row">
-                <button type="button">To’lov chekini adminga yuborish</button>
-            </div>
-            
-            <div class="pay__description">
-                <h3>Eslatma, adminga to’lov cheki va maxsus raqamni yuboring, aks holda e’loningiz guruhga joylanmaydi!</h3>
-            </div>
-
+      <div class="data__container">
+        <div class="data__title">
+          <h1>
+            <span>“Surxon uy-joy va mashina bozori”</span>
+            telegram guruhiga e’loningiz chiqishi uchun quyidagi kartaga 50,000
+            so’m to’lovni amalga oshirishingiz kerak!
+          </h1>
         </div>
-    </div>
 
+        <div class="pay__cardCode">
+          <h3>To’lov qilish uchun karta raqami:</h3>
+
+          <div class="pay__copyCode">
+            <h4 id="card-code">9860030347340058</h4>
+            <button type="button" id="textCopy-btn">
+              <img
+                src="./assets/images/svg/copeIcon.svg"
+                alt="copy icon"
+                id="copy-icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="pay__numbers">
+          <div class="pay__numberEl">
+            <h3 id="pay-number">0001</h3>
+          </div>
+
+          <h2 class="error__text">
+            Ushbu maxsus raqamni aslo unutmang va adminga ayting, aks holda
+            e’loningizni topa olmaymiz!
+          </h2>
+        </div>
+
+        <h3 class="pay__text">
+          Yuqoridagi kartaga to’lov qiling, chekni va maxsus raqamni bizga
+          yuboring.
+        </h3>
+
+        <div class="form-submit__row">
+          <button type="button">To’lov chekini adminga yuborish</button>
+        </div>
+
+        <div class="pay__description">
+          <h3>
+            Eslatma, adminga to’lov cheki va maxsus raqamni yuboring, aks holda
+            e’loningiz guruhga joylanmaydi!
+          </h3>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./js/main.js"></script>
     <script src="https://unpkg.com/imask"></script>
-</body>
+  </body>
 </html>

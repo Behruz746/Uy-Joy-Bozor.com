@@ -105,12 +105,12 @@ function submitForm(event) {
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.readyState == 4 && xhr.status ===  200 && !resultUserAd && resultUserFix && resultUserDate && resultUserFrom && elementsUserNumberFirst.value.length <= 13 && elementUserPrice.value.length === 0) {
+      if (xhr.readyState == 4 && xhr.status ===  200 && !resultUserAd && resultUserFix && resultUserDate && resultUserFrom && elementsUserNumberFirst.value.length <= 13 && elementUserPrice.value.length === 0 && elementsUserRoom.value.length === 0 && elementsUserEstate.value.length === 0) {
         var response = JSON.parse(xhr.responseText);
-        console.log(response);
-      } else if (xhr.readyState == 4) {
         payContainer.classList.remove('remove--add');
         container.classList.add('remove--add');
+        console.log(response);
+      } else if (xhr.readyState == 4) {
         console.error("Backendga so'rovda xatolik yuz berdi. ERROR");
       }
     }
