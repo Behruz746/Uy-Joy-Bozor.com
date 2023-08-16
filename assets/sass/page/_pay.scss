@@ -1,0 +1,109 @@
+#pay-container {
+    margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
+}
+
+.pay__cardCode {
+    width: 100%;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h3 {
+        max-width: 150px;
+        width: 100%;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: #7F8C8D;
+    }
+
+    .pay__copyCode {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h4 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; 
+            color: #2C3E50;
+        }
+
+        button {
+            padding: 10px;
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+
+            img {
+                width: 17px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.pay__numbers {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .pay__numberEl {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        width: 63px;
+        height: 45px;
+        background-color: #E74C3C;
+
+        h3 {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            color: #fff;
+        }
+    }
+
+    .error__text {
+        max-width: 388px;
+        width: 100%;
+    }
+}
+
+.pay__text {
+    max-width: 560px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: #7F8C8D;
+}
+
+.pay__description {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 24px;
+    border-radius: 6px;
+    background: rgba(231, 76, 60, 0.20);
+
+    h3 {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; 
+        color: $redColor;
+    }
+}

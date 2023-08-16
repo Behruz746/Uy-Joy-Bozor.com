@@ -1,6 +1,10 @@
 import "./btn.js";
 import "./imgFile.js";
 import "./number.js";
+import "./textCopy.js";
+
+const payContainer = document.getElementById('pay-container');
+const container = document.querySelector('.container');
 
 const mainForm = document.forms.mainForm;
 const elements = mainForm.elements;
@@ -101,11 +105,12 @@ function submitForm(event) {
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.readyState == 4 && xhr.status ===  200 && resultUserAd && resultUserFix && resultUserDate && resultUserFrom) {
+      if (xhr.readyState == 4 && xhr.status ===  200 && !resultUserAd && resultUserFix && resultUserDate && resultUserFrom && elementsUserNumberFirst.value.length <= 13 && elementUserPrice.value.length === 0) {
         var response = JSON.parse(xhr.responseText);
         console.log(response);
       } else if (xhr.readyState == 4) {
-        window.location = "http://127.0.0.1:5501/pay.html";
+        payContainer.classList.remove('remove--add');
+        container.classList.add('remove--add');
         console.error("Backendga so'rovda xatolik yuz berdi. ERROR");
       }
     }
@@ -140,6 +145,7 @@ focusEl.forEach((item, index) => {
     item.placeholder = itemPl;
   });
 });
+
 
 const mask = IMask(elementsUserNumberFirst, maskOptions);
 mainForm.addEventListener("submit", submitForm);
